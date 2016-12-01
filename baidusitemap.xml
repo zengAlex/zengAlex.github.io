@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/11/30/h5-meta/</loc>
+    <lastmod>2016-12-01T12:21:53.000Z</lastmod>
+    <data>
+        <display>
+        <title>H5-meta</title>
+        <pubTime>2016-11-30T14:10:00.000Z</pubTime>
+        
+        <tag>H5</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/12/01/pc-window-open/</loc>
+    <lastmod>2016-12-01T11:57:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>pc-window-open</title>
+        <pubTime>2016-12-01T11:50:00.000Z</pubTime>
+        
+        <tag>杂记</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+</urlset>

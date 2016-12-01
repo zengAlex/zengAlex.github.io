@@ -6,17 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>tcspin&#39;blog</title>
+  <title>H5-meta | tcspin&#39;blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="毕业于职业院校，热爱前端，爱钻研，目标是全栈工程师">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tcspin'blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="&amp;lt; meta &amp;gt;页面标签1.静止页面伸缩
+&amp;lt; meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no&amp;quot;/&amp;gt;
+width=device-width 会导致 iPhone 5 添加到主屏">
+<meta property="og:type" content="article">
+<meta property="og:title" content="H5-meta">
+<meta property="og:url" content="http://yoursite.com/2016/11/30/h5-meta/index.html">
 <meta property="og:site_name" content="tcspin'blog">
-<meta property="og:description" content="毕业于职业院校，热爱前端，爱钻研，目标是全栈工程师">
+<meta property="og:description" content="&amp;lt; meta &amp;gt;页面标签1.静止页面伸缩
+&amp;lt; meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no&amp;quot;/&amp;gt;
+width=device-width 会导致 iPhone 5 添加到主屏">
+<meta property="og:image" content="http://o8cnml828.bkt.clouddn.com/h5-meta.jpg">
+<meta property="og:updated_time" content="2016-12-01T12:21:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tcspin'blog">
-<meta name="twitter:description" content="毕业于职业院校，热爱前端，爱钻研，目标是全栈工程师">
+<meta name="twitter:title" content="H5-meta">
+<meta name="twitter:description" content="&amp;lt; meta &amp;gt;页面标签1.静止页面伸缩
+&amp;lt; meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no&amp;quot;/&amp;gt;
+width=device-width 会导致 iPhone 5 添加到主屏">
+<meta name="twitter:image" content="http://o8cnml828.bkt.clouddn.com/h5-meta.jpg">
   
     <link rel="alternative" href="/atom.xml" title="tcspin&#39;blog" type="application/atom+xml">
   
@@ -137,77 +146,14 @@
 </nav>
 
       <div class="body-wrap">
-        
-  
-    <article id="post-pc-window-open" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-h5-meta" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/01/pc-window-open/">pc-window-open</a>
-    </h1>
-  
-
-        <a href="/2016/12/01/pc-window-open/" class="archive-article-date">
-  	<time datetime="2016-12-01T11:50:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-01</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://o8cnml828.bkt.clouddn.com/qq,wechat_loginimg.png" alt="icon"></p>
-<p>使用window.open(URL,name,features,replace);<a href="http://www.w3school.com.cn/jsref/met_win_open.asp" target="_blank" rel="external">W3C地址</a>;</p>
-<pre><code>用window.open()打开的页面即是这个页面的子页面，他们父子间可以相互执行函数方法。
-</code></pre><p>记得上次有个师弟问我，说怎么解决他登录后跳到成功页面，切刷新父窗口。</p>
-<p>我就简单的说下我们这边是怎么实现：</p>
-<p> 1.图片的登录按钮都是一个a 标签， 页面有有后台（我们是用PHP:tal）给的制定的跳转地址<br>    例如微信： window.open(window.wechat_url,””,”channelmode=yes”);</p>
-<p>2.跳转到了这个有二维码的页面后，由后台监听是否成功，如果成功则跳转到一个写有控制父层函数的页面上去.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;!--关闭子窗口并刷新父窗口--&gt;</div><div class="line">&lt;script language="JavaScript"&gt; </div><div class="line">	(function() &#123;</div><div class="line">		window.opener.location.href = window.opener.location.href;     </div><div class="line">		if (window.opener.progressWindow)&#123;         </div><div class="line">			window.opener.progressWindow.close();     </div><div class="line">		&#125;     </div><div class="line">		window.close(); </div><div class="line">	&#125;)();-&gt; 函数自执行 </div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂记/">杂记</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/01/pc-window-open/#more">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-h5-meta" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/30/h5-meta/">H5-meta</a>
+    <h1 class="article-title" itemprop="name">
+      H5-meta
     </h1>
   
 
@@ -248,6 +194,37 @@ width=device-width 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式�
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/blogImg/alipay.jpeg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/blogImg/wechatpay.jpeg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -260,26 +237,82 @@ width=device-width 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式�
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/11/30/h5-meta/#more">展开全文 >></a>
-        </p>
-      
 
+      
+        <div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode"></div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
-
-
-
+  
+<nav id="article-nav">
+  
+    <a href="/2016/12/01/pc-window-open/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          pc-window-open
+        
+      </div>
+    </a>
   
   
+</nav>
+
+
+
+
+
+
+
 
 
       </div>
@@ -300,8 +333,8 @@ width=device-width 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式�
 	var yiliaConfig = {
 		mathjax: false,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
