@@ -71,9 +71,12 @@
     			
             
     			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">友情链接</a>
+    			
+    			
             
     			
-    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">简言</a>
+    			<a class="js-smart-menu" data-idx="3" href="javascript:void(0)">简言</a>
     			
     			
             
@@ -165,7 +168,47 @@
 <p> 1.图片的登录按钮都是一个a 标签， 页面有有后台（我们是用PHP:tal）给的制定的跳转地址<br>    例如微信： window.open(window.wechat_url,””,”channelmode=yes”);</p>
 <p>2.跳转到了这个有二维码的页面后，由后台监听是否成功，如果成功则跳转到一个写有控制父层函数的页面上去.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;!--关闭子窗口并刷新父窗口--&gt;</div><div class="line">&lt;script language="JavaScript"&gt; </div><div class="line">	(function() &#123;</div><div class="line">		window.opener.location.href = window.opener.location.href;     </div><div class="line">		if (window.opener.progressWindow)&#123;         </div><div class="line">			window.opener.progressWindow.close();     </div><div class="line">		&#125;     </div><div class="line">		window.close(); </div><div class="line">	&#125;)();-&gt; 函数自执行 </div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h3 id="优化的方法部分摘录于雅虎军规以及自己的总结"><a href="#优化的方法部分摘录于雅虎军规以及自己的总结" class="headerlink" title="优化的方法部分摘录于雅虎军规以及自己的总结"></a>优化的方法部分摘录于雅虎军规以及自己的总结</h3><ul>
+<li>尽可能减少Http请求(图片的优化-&gt;雪碧图，JS，css合并压缩)</li>
+<li>使用CDN内容分发网络（放置节点服务器）使用户以最近，最快的获取内容</li>
+<li>添加Expire/Cache-Control_http协议常用头部之一</li>
+<li>使用Gzip压缩（先放在服务器压缩下）</li>
+<li>把CSS放在页面顶部，JS放在页面底部，把css,js外部引用（看情况使用），避免在css中Expression（俗称css表达式）</li>
+<li>减少DNS查询</li>
+<li>避免重定向，301状态码-&gt;表示用户请求的页面被移动到另外的位置表示永久重定向；</li>
+<li>移除重复的脚本</li>
+<li>减少DOM的数量 和减少DOM操作 尽量减少Iframe</li>
+<li>预加载（图片）和按需加载</li>
+<li>单个内容文件不要超过25K</li>
+<li>使AJAX 缓存</li>
+</ul>
+<h3 id="返回到上一页面"><a href="#返回到上一页面" class="headerlink" title="返回到上一页面"></a>返回到上一页面</h3><pre><code>history.back();
+window.history.go(-1);//返回上一页不刷新  
+window.location.href = document.referrer;//返回上一页并刷新
+</code></pre><h3 id="获取当前时间戳"><a href="#获取当前时间戳" class="headerlink" title="获取当前时间戳"></a><strong>获取当前时间戳</strong></h3><pre><code>第一种：var timestamp=new Date().getTime();
 
+第二种：var timestamp = (new Date()).valueOf();
+
+第三种：var timestamp = Date.parse(new Date());
+</code></pre><p>第三种：获取的时间戳是把毫秒改成000显示，</p>
+<h4 id="时间戳-10-位的精准到秒数，-13位精准到毫秒，在转成系统时间时，我们需要转成13位的。在格式化。"><a href="#时间戳-10-位的精准到秒数，-13位精准到毫秒，在转成系统时间时，我们需要转成13位的。在格式化。" class="headerlink" title="时间戳 10 位的精准到秒数， 13位精准到毫秒，在转成系统时间时，我们需要转成13位的。在格式化。"></a>时间戳 10 位的精准到秒数， 13位精准到毫秒，在转成系统时间时，我们需要转成13位的。在格式化。</h4><h3 id="实现开始时间比结束时间少三个小时"><a href="#实现开始时间比结束时间少三个小时" class="headerlink" title="实现开始时间比结束时间少三个小时"></a>实现开始时间比结束时间少三个小时</h3><h4 id="demo-startTime："><a href="#demo-startTime：" class="headerlink" title="demo-startTime："></a>demo-startTime：</h4><pre><code>var timeNow = new Date().getTime();
+
+var testTwo = new Date(timeNow);
+
+var testTime = testTwo.getFullYear()+&quot;-&quot;+(testTwo.getMonth()+1)+&quot;-&quot;+testTwo.getDate()+&quot; &quot;+testTwo.getHours()+&quot;:&quot;+testTwo.getMinutes()+&quot;:&quot;+testTwo.getSeconds();
+</code></pre><h4 id="demo-endTime："><a href="#demo-endTime：" class="headerlink" title="demo-endTime："></a>demo-endTime：</h4><pre><code>var timeEnd = new Date().getTime();
+
+var testTwo = new Date(timeEnd  + 3600 * 3*1000);
+
+var testTime = testTwo.getFullYear()+&quot;-&quot;+(testTwo.getMonth()+1)+&quot;-&quot;+testTwo.getDate()+&quot; &quot;+testTwo.getHours()+&quot;:&quot;+testTwo.getMinutes()+&quot;:&quot;+testTwo.getSeconds();
+</code></pre><h3 id="解释："><a href="#解释：" class="headerlink" title="解释："></a><strong>解释</strong>：</h3><h4 id="例子里面的几个方法："><a href="#例子里面的几个方法：" class="headerlink" title="例子里面的几个方法："></a>例子里面的几个方法：</h4><pre><code>getFullYear() -&gt; 得到当前的年份；
+
+getMonth() + 1 -&gt; 得到当前的月份；
+
+getDate() -&gt; 得到当前的日期；
+
+....以此类推
+</code></pre><h5 id="获取的月份总是比实际当前月份少1-所以要加上一个月-这有JS-函数自身所决定的。"><a href="#获取的月份总是比实际当前月份少1-所以要加上一个月-这有JS-函数自身所决定的。" class="headerlink" title="获取的月份总是比实际当前月份少1,所以要加上一个月,这有JS 函数自身所决定的。"></a>获取的月份总是比实际当前月份少1,所以要加上一个月,这有JS 函数自身所决定的。</h5>
       
 
       
@@ -207,7 +250,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/30/h5-meta/">H5-meta</a>
+      <a class="article-title" href="/2016/11/30/h5-meta/">H5-meta-and-other</a>
     </h1>
   
 
@@ -244,6 +287,88 @@ width=device-width 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式�
 </code></pre><h5 id="页面描述内容-descriptin"><a href="#页面描述内容-descriptin" class="headerlink" title="页面描述内容 descriptin"></a>页面描述内容 descriptin</h5><pre><code>&lt; meta name=&quot;description&quot; content=&quot;your description&quot;&gt;
 </code></pre><h5 id="定义网页作者-author"><a href="#定义网页作者-author" class="headerlink" title="定义网页作者 author"></a>定义网页作者 author</h5><pre><code>&lt; meta name=&quot;author&quot; content=&quot;author,email address&quot;&gt;
 </code></pre><h5 id="定义网页搜索引擎索引方式，robotterms-是一组使用英文逗号「-」分割的值，通常有如下几种取值：none，noindex，nofollow，all，index和follow。"><a href="#定义网页搜索引擎索引方式，robotterms-是一组使用英文逗号「-」分割的值，通常有如下几种取值：none，noindex，nofollow，all，index和follow。" class="headerlink" title="定义网页搜索引擎索引方式，robotterms 是一组使用英文逗号「,」分割的值，通常有如下几种取值：none，noindex，nofollow，all，index和follow。"></a>定义网页搜索引擎索引方式，robotterms 是一组使用英文逗号「,」分割的值，通常有如下几种取值：none，noindex，nofollow，all，index和follow。</h5><pre><code>&lt; meta name=&quot;robots&quot; content=&quot;index,follow&quot;&gt;
+</code></pre><h3 id="H5-纪录"><a href="#H5-纪录" class="headerlink" title="H5 纪录"></a>H5 纪录</h3><p>1.搜索框问题使得ios 的return键 变成”搜索”</p>
+<pre><code>form 标签加上 action=&quot;#&quot; 和 input 加上 type=&quot;search&quot; 属性即可实现ios输入法中的“搜索”键
+
+//去掉input search 自带的关闭按钮和默认边框
+input[type=&quot;search&quot;]{
+    -webkit-appearance:none;
+} 
+input::-webkit-search-cancel-button {
+    display: none;
+}
+</code></pre><p>2.ios android 通用字体</p>
+<pre><code>font-family: Helvetica;
+</code></pre><p>3.去掉点击事件后出现的背景框</p>
+<pre><code>-webkit-tap-highlight-color:rgba(0,0,0,0);
+</code></pre><p>4.input [type=search] 搜索框右侧小图标美化</p>
+<pre><code>input[type=&quot;search&quot;]::-webkit-search-cancel-button{ -webkit-appearance: none;height: 15px; width: 15px;border-radius: 8px;background:url(&quot;images/searchicon.png&quot;) no-repeat 0 0;background-size: 15px 15px;}
+</code></pre><h3 id="JS获取浏览器信息："><a href="#JS获取浏览器信息：" class="headerlink" title="JS获取浏览器信息："></a>JS获取浏览器信息：</h3><p><a href="http://www.jianshu.com/users/472a7a879e5a/latest_articles" target="_blank" rel="external">此处摘录于你好小耗子</a></p>
+<ul>
+<li>浏览器代码名称：navigator.appCodeName</li>
+<li>浏览器名称：navigator.appName</li>
+<li>浏览器版本号：navigator.appVersion </li>
+<li>对Java的支持：navigator.javaEnabled()</li>
+<li>MIME类型（数组）：navigator.mimeTypes</li>
+<li>系统平台：navigator.platform </li>
+<li>插件（数组）：navigator.plugins </li>
+<li>用户代理：navigator.userAgent</li>
+</ul>
+<h2 id="—"><a href="#—" class="headerlink" title="—"></a>—</h2><h3 id="判断屏幕是否旋转（-表示“左”转）"><a href="#判断屏幕是否旋转（-表示“左”转）" class="headerlink" title="判断屏幕是否旋转（-表示“左”转）"></a>判断屏幕是否旋转（-表示“左”转）</h3><pre><code>function orientationChange() { 
+    switch(window.orientation) { 　　
+        case 0: console.info(&quot;0,screen-width: &quot; + screen.width + &quot;; screen-height:&quot; + screen.height);
+        break;
+        case -90: console.info(&quot; -90,screen-width: &quot; + screen.width + &quot;; screen-height:&quot; + screen.height); 
+        break; 　　
+        case 90: console.info(&quot;90,screen-width: &quot; + screen.width + &quot;; screen-height:&quot; + screen.height);
+        break;
+        case 180: console.info(&quot; 180,screen-width: &quot; + screen.width + &quot;; screen-height:&quot; + screen.height); 　　            break;
+    };
+};
+</code></pre><hr>
+<h3 id="获取平台类型（一）"><a href="#获取平台类型（一）" class="headerlink" title="获取平台类型（一）"></a>获取平台类型（一）</h3><pre><code>platform : function(){
+       var ua = navigator.userAgent.toLowerCase();
+       if( ua.indexOf(&apos;macintosh&apos;) &gt; -1){
+           return &apos;MacOS&apos;;
+       }else if ( ua.indexOf(&apos;iphone&apos;) &gt; -1 || ua.indexOf(&apos;ipad&apos;) &gt; -1 || ua.indexOf(&apos;ios-sdk&apos;) &gt; -1){
+           return &apos;IOS&apos;;
+       }else if( ua.indexOf(&apos;android&apos;) &gt; -1 || ua.indexOf(&apos;android-sdk&apos;) &gt; -1){
+           return &apos;Android&apos;;
+       }else if( ua.indexOf(&apos;linux&apos;) &gt; -1){
+           return &apos;Linux&apos;;
+       }else if( ua.indexOf(&apos;windows&apos;) &gt; -1){
+           return &apos;Windows&apos;;
+       }
+       return &apos;Unknow&apos;;
+    },
+</code></pre><h3 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h3><pre><code>var browser = {
+    versions: function() {
+        var u = navigator.userAgent, app = navigator.appVersion;
+        return {//移动终端浏览器版本信息
+            trident: u.indexOf(&apos;Trident&apos;) &gt; -1, //IE内核
+            presto: u.indexOf(&apos;Presto&apos;) &gt; -1, //opera内核
+            webKit: u.indexOf(&apos;AppleWebKit&apos;) &gt; -1, //苹果、谷歌内核
+            gecko: u.indexOf(&apos;Gecko&apos;) &gt; -1 &amp;&amp; u.indexOf(&apos;KHTML&apos;) == -1, //火狐内核
+            mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!app.match(/AppleWebKit/), //是否为移动终端
+            ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+            android: u.indexOf(&apos;Android&apos;) &gt; -1 || u.indexOf(&apos;Linux&apos;) &gt; -1, //android终端或者uc浏览器
+            iPhone: u.indexOf(&apos;iPhone&apos;) &gt; -1 || u.indexOf(&apos;Mac&apos;) &gt; -1, //是否为iPhone或者QQHD浏览器
+            iPad: u.indexOf(&apos;iPad&apos;) &gt; -1, //是否iPad
+            webApp: u.indexOf(&apos;Safari&apos;) == -1 //是否web应该程序，没有头部与底部
+        };
+    }(),
+    language: (navigator.browserLanguage || navigator.language).toLowerCase()
+};
+};
+toLowerCase()--&gt;讲字符串的字母转为小写，并返回一个String 类型
+</code></pre><h3 id="是否IE"><a href="#是否IE" class="headerlink" title="是否IE"></a>是否IE</h3><pre><code>isIE : function(){
+       var myNav = navigator.userAgent.toLowerCase(),
+           isIe = false;
+        if( myNav.indexOf(&apos;msie&apos;) &gt; -1 || myNav.indexOf(&apos;.net&apos;) &gt; -1) {
+            isIe = true;
+        }
+        return isIe;
+    },
 </code></pre>
       
 
@@ -324,6 +449,8 @@ width=device-width 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式�
       <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
     
     
+      <li data-hook="tools-section-friends"><span class="text">友链</span><i class="icon-link"></i></li>
+    
     
       <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
     
@@ -342,6 +469,18 @@ width=device-width 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式�
     	</section>
     
 
+    
+    	<section class="tools-section tools-section-friends">
+  		
+  			<div class="friends-wrap" id="js-friends">
+  			
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com">github</a>
+  	        
+  	          <a target="_blank" class="main-nav-link switch-friends-link" href="http://code.w3ctech.com/">w3ctech</a>
+  	        
+  	        </div>
+  		
+    	</section>
     
 
     

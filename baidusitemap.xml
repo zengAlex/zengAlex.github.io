@@ -3,27 +3,9 @@
 
 
     
-    
-  <url>
-    <loc>http://yoursite.com/2016/11/30/h5-meta/</loc>
-    <lastmod>2016-12-01T12:21:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>H5-meta</title>
-        <pubTime>2016-11-30T14:10:00.000Z</pubTime>
-        
-        <tag>H5</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
   <url>
     <loc>http://yoursite.com/2016/12/01/pc-window-open/</loc>
-    <lastmod>2016-12-01T11:57:34.000Z</lastmod>
+    <lastmod>2016-12-01T16:05:58.000Z</lastmod>
     <data>
         <display>
         <title>pc-window-open</title>
@@ -37,4 +19,22 @@
     </data>
     </url>
 
+    
+  <url>
+    <loc>http://yoursite.com/2016/11/30/h5-meta/</loc>
+    <lastmod>2016-12-01T16:00:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>H5-meta-and-other</title>
+        <pubTime>2016-11-30T14:10:00.000Z</pubTime>
+        
+        <tag>H5</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
 </urlset>
