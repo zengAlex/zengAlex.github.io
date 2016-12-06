@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    
+    <lastmod>2016-12-06T10:58:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/12/01/pc-window-open/</loc>
     
     <lastmod>2016-12-01T16:05:58.000Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://yoursite.com/2016/11/30/h5-meta/</loc>
     
     <lastmod>2016-12-01T16:00:34.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/tag/index.html</loc>
-    
-    <lastmod>2016-12-01T13:07:38.000Z</lastmod>
     
   </url>
   
