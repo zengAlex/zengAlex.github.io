@@ -36,25 +36,33 @@ delete
 
 
 203
-Redirect －重定向，需要的到其它地方去获取这个资源
+Redirect －重定向，需要的到其它地方去获取这个资源｜
 
 
 404
-not found 。无法获取资源
-
-
-
-3 报文
-
-
-
-request message(请求报文)
-由web客户端发往服务器端
+not found，无法获取资源｜
 
 
 
 
-response m">
+状态码分类
+
+
+
+
+整体范围
+已定义范围
+分类
+
+
+
+
+100~199
+100~101
+信息提示
+
+
+200～">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习 http">
 <meta property="og:url" content="http://yoursite.com/2016/12/04/http-Knowledge/index.html">
@@ -87,26 +95,35 @@ delete
 
 
 203
-Redirect －重定向，需要的到其它地方去获取这个资源
+Redirect －重定向，需要的到其它地方去获取这个资源｜
 
 
 404
-not found 。无法获取资源
-
-
-
-3 报文
-
-
-
-request message(请求报文)
-由web客户端发往服务器端
+not found，无法获取资源｜
 
 
 
 
-response m">
-<meta property="og:updated_time" content="2016-12-06T11:09:17.000Z">
+状态码分类
+
+
+
+
+整体范围
+已定义范围
+分类
+
+
+
+
+100~199
+100~101
+信息提示
+
+
+200～">
+<meta property="og:image" content="http://o8cnml828.bkt.clouddn.com/727407702.jpg">
+<meta property="og:updated_time" content="2016-12-06T15:29:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习 http">
 <meta name="twitter:description" content="1 常见的http 方法
@@ -137,25 +154,34 @@ delete
 
 
 203
-Redirect －重定向，需要的到其它地方去获取这个资源
+Redirect －重定向，需要的到其它地方去获取这个资源｜
 
 
 404
-not found 。无法获取资源
-
-
-
-3 报文
-
-
-
-request message(请求报文)
-由web客户端发往服务器端
+not found，无法获取资源｜
 
 
 
 
-response m">
+状态码分类
+
+
+
+
+整体范围
+已定义范围
+分类
+
+
+
+
+100~199
+100~101
+信息提示
+
+
+200～">
+<meta name="twitter:image" content="http://o8cnml828.bkt.clouddn.com/727407702.jpg">
   
     <link rel="alternative" href="/atom.xml" title="tcspin&#39;blog" type="application/atom+xml">
   
@@ -303,7 +329,8 @@ response m">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1 常见的http 方法</p>
+        <p><img src="http://o8cnml828.bkt.clouddn.com/727407702.jpg" alt="http"></p>
+<p>1 常见的http 方法</p>
 <table>
 <thead>
 <tr>
@@ -324,18 +351,56 @@ response m">
 <table>
 <thead>
 <tr>
-<th>200</th>
-<th>表示成功，文档正确返回</th>
+<th style="text-align:right">200</th>
+<th style="text-align:right">表示成功，文档正确返回</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>203</td>
-<td>Redirect －重定向，需要的到其它地方去获取这个资源</td>
+<td style="text-align:right">203</td>
+<td style="text-align:right">Redirect －重定向，需要的到其它地方去获取这个资源｜</td>
 </tr>
 <tr>
-<td>404</td>
-<td>not found 。无法获取资源</td>
+<td style="text-align:right">404</td>
+<td style="text-align:right">not found，无法获取资源｜</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>状态码分类</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">整体范围</th>
+<th style="text-align:center">已定义范围</th>
+<th style="text-align:center">分类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">100~199</td>
+<td style="text-align:center">100~101</td>
+<td style="text-align:center">信息提示</td>
+</tr>
+<tr>
+<td style="text-align:center">200～299｜200~206</td>
+<td style="text-align:center">成功</td>
+</tr>
+<tr>
+<td style="text-align:center">300~399</td>
+<td style="text-align:center">300~305</td>
+<td style="text-align:center">重定向</td>
+</tr>
+<tr>
+<td style="text-align:center">400~499</td>
+<td style="text-align:center">400~415</td>
+<td style="text-align:center">客户端错误</td>
+</tr>
+<tr>
+<td style="text-align:center">500~599</td>
+<td style="text-align:center">500~505</td>
+<td style="text-align:center">服务器错误</td>
 </tr>
 </tbody>
 </table>
@@ -343,14 +408,14 @@ response m">
 <table>
 <thead>
 <tr>
-<th>request message(请求报文)</th>
-<th>由web客户端发往服务器端</th>
+<th style="text-align:right">request message(请求报文)</th>
+<th style="text-align:right">由web客户端发往服务器端</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>response message(响应报文)</td>
-<td>由服务器端发往客户端的报文</td>
+<td style="text-align:right">response message(响应报文)</td>
+<td style="text-align:right">由服务器端发往客户端的报文</td>
 </tr>
 </tbody>
 </table>
@@ -462,6 +527,15 @@ response m">
   
 <nav id="article-nav">
   
+    <a href="/2016/12/06/javascript-power/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
   
     <a href="/2016/12/01/pc-window-open/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">pc-window-open</div>
@@ -529,15 +603,15 @@ response m">
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">杂记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">H5</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">http</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">杂记</a>
               </li>
             
             <div class="clearfix"></div>
