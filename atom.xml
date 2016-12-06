@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-12-01T16:05:58.000Z</updated>
+  <updated>2016-12-06T11:09:17.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,83 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学习 http</title>
+    <link href="http://yoursite.com/2016/12/04/http-Knowledge/"/>
+    <id>http://yoursite.com/2016/12/04/http-Knowledge/</id>
+    <published>2016-12-04T06:12:00.000Z</published>
+    <updated>2016-12-06T11:09:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>1 常见的http 方法</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">get</th>
+<th style="text-align:center">post</th>
+<th style="text-align:center">put</th>
+<th style="text-align:center">head</th>
+<th style="text-align:center">delete</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<p>2 常见的状态码</p>
+<table>
+<thead>
+<tr>
+<th>200</th>
+<th>表示成功，文档正确返回</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>203</td>
+<td>Redirect －重定向，需要的到其它地方去获取这个资源</td>
+</tr>
+<tr>
+<td>404</td>
+<td>not found 。无法获取资源</td>
+</tr>
+</tbody>
+</table>
+<p>3 报文</p>
+<table>
+<thead>
+<tr>
+<th>request message(请求报文)</th>
+<th>由web客户端发往服务器端</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>response message(响应报文)</td>
+<td>由服务器端发往客户端的报文</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;1 常见的http 方法&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;get&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;post&lt;/th&gt;
+&lt;th style=&quot;text-align:
+    
+    </summary>
+    
+    
+      <category term="http" scheme="http://yoursite.com/tags/http/"/>
+    
+  </entry>
   
   <entry>
     <title>pc-window-open</title>
