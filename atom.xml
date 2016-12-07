@@ -4,9 +4,9 @@
   <subtitle>望不负期盼</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="//blog.tcspin.com/"/>
   <updated>2016-12-06T15:29:47.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>//blog.tcspin.com/</id>
   
   <author>
     <name>canxin Zeng</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>学习 http</title>
-    <link href="http://yoursite.com/2016/12/04/http-Knowledge/"/>
-    <id>http://yoursite.com/2016/12/04/http-Knowledge/</id>
+    <link href="//blog.tcspin.com/2016/12/04/http-Knowledge/"/>
+    <id>//blog.tcspin.com/2016/12/04/http-Knowledge/</id>
     <published>2016-12-04T06:12:00.000Z</published>
     <updated>2016-12-06T15:29:47.000Z</updated>
     
@@ -126,14 +126,14 @@
     </summary>
     
     
-      <category term="http" scheme="http://yoursite.com/tags/http/"/>
+      <category term="http" scheme="//blog.tcspin.com/tags/http/"/>
     
   </entry>
   
   <entry>
     <title>pc-window-open</title>
-    <link href="http://yoursite.com/2016/12/01/pc-window-open/"/>
-    <id>http://yoursite.com/2016/12/01/pc-window-open/</id>
+    <link href="//blog.tcspin.com/2016/12/01/pc-window-open/"/>
+    <id>//blog.tcspin.com/2016/12/01/pc-window-open/</id>
     <published>2016-12-01T11:50:00.000Z</published>
     <updated>2016-12-01T16:05:58.000Z</updated>
     
@@ -195,14 +195,14 @@ getDate() -&gt; 得到当前的日期；
     </summary>
     
     
-      <category term="杂记" scheme="http://yoursite.com/tags/%E6%9D%82%E8%AE%B0/"/>
+      <category term="杂记" scheme="//blog.tcspin.com/tags/%E6%9D%82%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>H5-meta-and-other</title>
-    <link href="http://yoursite.com/2016/11/30/h5-meta/"/>
-    <id>http://yoursite.com/2016/11/30/h5-meta/</id>
+    <link href="//blog.tcspin.com/2016/11/30/h5-meta/"/>
+    <id>//blog.tcspin.com/2016/11/30/h5-meta/</id>
     <published>2016-11-30T14:10:00.000Z</published>
     <updated>2016-12-01T16:00:34.000Z</updated>
     
@@ -324,7 +324,7 @@ toLowerCase()--&gt;讲字符串的字母转为小写，并返回一个String 类
     </summary>
     
     
-      <category term="H5" scheme="http://yoursite.com/tags/H5/"/>
+      <category term="H5" scheme="//blog.tcspin.com/tags/H5/"/>
     
   </entry>
   
