@@ -163,6 +163,19 @@
     <article id="post-gulp-css-sprite" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/14/gulp-css-sprite/">gulp-css-sprite</a>
+    </h1>
+  
+
+        <a href="/2016/12/14/gulp-css-sprite/" class="archive-article-date">
+  	<time datetime="2016-12-14T15:21:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-14</time>
+</a>
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="1-先建立好目录文件夹，例如我的在build-下"><a href="#1-先建立好目录文件夹，例如我的在build-下" class="headerlink" title="1. 先建立好目录文件夹，例如我的在build 下"></a>1. 先建立好目录文件夹，例如我的在build 下</h3><h3 id="2-建立一个package-json-文件"><a href="#2-建立一个package-json-文件" class="headerlink" title="2.建立一个package.json 文件"></a>2.建立一个package.json 文件</h3><pre><code>（前提是你已经全局安装好了node和全局安装了gulp),你也可以npm init 到该目录下，他会有些选项要你添，填完到保存，就会自动生成一个package.json
@@ -191,10 +204,9 @@ gulp.task(&apos;spritesmith&apos;, function() {
 <pre><code>imgName 和 cssName 分别表示你合并后点文件名字
 padding 则表示雪碧图里面每个icon 相距的位置
 
-algorithm：他有5个方向
-如图
-![](/assets/blogImg/gulpcsssprite.jpeg)
-</code></pre>
+algorithm：他有5个方向 如下图
+</code></pre><p><img src="/assets/blogImg/gulpcsssprite.jpeg" alt=""></p>
+
       
 
       
@@ -202,6 +214,11 @@ algorithm：他有5个方向
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端自动化/">前端自动化</a></li></ul>
+	</div>
+
       
 
       
@@ -683,7 +700,7 @@ toLowerCase()--&gt;讲字符串的字母转为小写，并返回一个String 类
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">杂记</a>
+                <a href="javascript:void(0)">前端自动化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -692,6 +709,10 @@ toLowerCase()--&gt;讲字符串的字母转为小写，并返回一个String 类
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">H5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">杂记</a>
               </li>
             
             <div class="clearfix"></div>

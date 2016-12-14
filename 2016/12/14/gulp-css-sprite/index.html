@@ -6,21 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//blog.tcspin.com">
-  <title>tcspin&#39;blog</title>
+  <title>gulp-css-sprite | tcspin&#39;blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="1. 先建立好目录文件夹，例如我的在build 下2.建立一个package.json 文件（前提是你已经全局安装好了node和全局安装了gulp),你也可以npm init 到该目录下，他会有些选项要你添，填完到保存，就会自动生成一个package.json
 3.  建立gulpfile.jsgulpfile.js是gulp项目的配置文件，是位于项目根目录的普通js文件（你也可以k将gulpfi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="tcspin'blog">
+<meta property="og:title" content="gulp-css-sprite">
 <meta property="og:url" content="//blog.tcspin.com/2016/12/14/gulp-css-sprite/index.html">
 <meta property="og:site_name" content="tcspin'blog">
 <meta property="og:description" content="1. 先建立好目录文件夹，例如我的在build 下2.建立一个package.json 文件（前提是你已经全局安装好了node和全局安装了gulp),你也可以npm init 到该目录下，他会有些选项要你添，填完到保存，就会自动生成一个package.json
 3.  建立gulpfile.jsgulpfile.js是gulp项目的配置文件，是位于项目根目录的普通js文件（你也可以k将gulpfi">
-<meta property="og:updated_time" content="2016-12-14T15:18:30.000Z">
+<meta property="og:image" content="//blog.tcspin.com/assets/blogImg/gulpcsssprite.jpeg">
+<meta property="og:updated_time" content="2016-12-14T15:31:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tcspin'blog">
+<meta name="twitter:title" content="gulp-css-sprite">
 <meta name="twitter:description" content="1. 先建立好目录文件夹，例如我的在build 下2.建立一个package.json 文件（前提是你已经全局安装好了node和全局安装了gulp),你也可以npm init 到该目录下，他会有些选项要你添，填完到保存，就会自动生成一个package.json
 3.  建立gulpfile.jsgulpfile.js是gulp项目的配置文件，是位于项目根目录的普通js文件（你也可以k将gulpfi">
+<meta name="twitter:image" content="//blog.tcspin.com/assets/blogImg/gulpcsssprite.jpeg">
   
     <link rel="alternative" href="/atom.xml" title="tcspin&#39;blog" type="application/atom+xml">
   
@@ -165,6 +167,19 @@
             <article id="post-gulp-css-sprite" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      gulp-css-sprite
+    </h1>
+  
+
+        <a href="/2016/12/14/gulp-css-sprite/" class="archive-article-date">
+  	<time datetime="2016-12-14T15:21:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-14</time>
+</a>
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="1-先建立好目录文件夹，例如我的在build-下"><a href="#1-先建立好目录文件夹，例如我的在build-下" class="headerlink" title="1. 先建立好目录文件夹，例如我的在build 下"></a>1. 先建立好目录文件夹，例如我的在build 下</h3><h3 id="2-建立一个package-json-文件"><a href="#2-建立一个package-json-文件" class="headerlink" title="2.建立一个package.json 文件"></a>2.建立一个package.json 文件</h3><pre><code>（前提是你已经全局安装好了node和全局安装了gulp),你也可以npm init 到该目录下，他会有些选项要你添，填完到保存，就会自动生成一个package.json
@@ -193,17 +208,52 @@ gulp.task(&apos;spritesmith&apos;, function() {
 <pre><code>imgName 和 cssName 分别表示你合并后点文件名字
 padding 则表示雪碧图里面每个icon 相距的位置
 
-algorithm：他有5个方向
-如图
-![](/assets/blogImg/gulpcsssprite.jpeg)
-</code></pre>
+algorithm：他有5个方向 如下图
+</code></pre><p><img src="/assets/blogImg/gulpcsssprite.jpeg" alt=""></p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你对我的支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/blogImg/alipay.jpeg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/blogImg/wechatpay.jpeg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端自动化/">前端自动化</a></li></ul>
+	</div>
+
       
 
       
@@ -335,7 +385,7 @@ algorithm：他有5个方向
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">杂记</a>
+                <a href="javascript:void(0)">前端自动化</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -344,6 +394,10 @@ algorithm：他有5个方向
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)">H5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">杂记</a>
               </li>
             
             <div class="clearfix"></div>
