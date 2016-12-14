@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.tcspin.com/"/>
-  <updated>2016-12-08T12:01:17.000Z</updated>
+  <updated>2016-12-14T15:18:30.000Z</updated>
   <id>//blog.tcspin.com/</id>
   
   <author>
@@ -14,6 +14,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="//blog.tcspin.com/2016/12/14/gulp-css-sprite/"/>
+    <id>//blog.tcspin.com/2016/12/14/gulp-css-sprite/</id>
+    <published>2016-12-14T15:13:05.000Z</published>
+    <updated>2016-12-14T15:18:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-先建立好目录文件夹，例如我的在build-下"><a href="#1-先建立好目录文件夹，例如我的在build-下" class="headerlink" title="1. 先建立好目录文件夹，例如我的在build 下"></a>1. 先建立好目录文件夹，例如我的在build 下</h3><h3 id="2-建立一个package-json-文件"><a href="#2-建立一个package-json-文件" class="headerlink" title="2.建立一个package.json 文件"></a>2.建立一个package.json 文件</h3><pre><code>（前提是你已经全局安装好了node和全局安装了gulp),你也可以npm init 到该目录下，他会有些选项要你添，填完到保存，就会自动生成一个package.json
+</code></pre><h3 id="3-建立gulpfile-js"><a href="#3-建立gulpfile-js" class="headerlink" title="3.  建立gulpfile.js"></a>3.  建立gulpfile.js</h3><pre><code>gulpfile.js是gulp项目的配置文件，是位于项目根目录的普通js文件（你也可以k将gulpfile.js放入其他文件夹下亦可）。  
+</code></pre><p>1.合并img 文件夹下到所有icon 小图标 </p>
+<pre><code>首先在gulpfile.js 里面引入gulp 和 gulp.spritesmith, 贴上代码
+
+ //gulpfile.js
+var gulp = require(&apos;gulp&apos;);
+var spritesmith = require(&apos;gulp.spritesmith&apos;);
+
+// 合并压缩成雪碧图
+gulp.task(&apos;spritesmith&apos;, function() {
+    return gulp.src(&apos;../source/img/imgsprite/*.png&apos;)//需要合并的图片地址
+        .pipe(spritesmith({
+            imgName: &apos;sprite.png&apos;,//保存合并后图片的名字
+            cssName: &apos;sprite.css&apos;,//保存合并后对于css样式的地址
+            padding: 5,//合并时两个图片的间距
+            algorithm: &apos;top-down&apos;
+        }))
+        .pipe(gulp.dest(&apos;../dist/images/&apos;)); // 输出到
+});
+</code></pre><blockquote>
+<p>gulp.spritesmith - api 这里我就简单的说下，详细的自己去看下 <a href="https://github.com/twolfson/gulp.spritesmith" target="_blank" rel="external">地址</a></p>
+</blockquote>
+<pre><code>imgName 和 cssName 分别表示你合并后点文件名字
+padding 则表示雪碧图里面每个icon 相距的位置
+
+algorithm：他有5个方向
+如图
+![](/assets/blogImg/gulpcsssprite.jpeg)
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;1-先建立好目录文件夹，例如我的在build-下&quot;&gt;&lt;a href=&quot;#1-先建立好目录文件夹，例如我的在build-下&quot; class=&quot;headerlink&quot; title=&quot;1. 先建立好目录文件夹，例如我的在build 下&quot;&gt;&lt;/a&gt;1. 先建立好目录文件夹，
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>学习 http</title>
