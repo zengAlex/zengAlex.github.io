@@ -198,14 +198,32 @@ gulp.task(&apos;spritesmith&apos;, function() {
         }))
         .pipe(gulp.dest(&apos;../dist/images/&apos;)); // 输出到
 });
-</code></pre><blockquote>
-<p>gulp.spritesmith - api 这里我就简单的说下，详细的自己去看下 <a href="https://github.com/twolfson/gulp.spritesmith" target="_blank" rel="external">地址</a></p>
+</code></pre><h3 id="gulp-spritesmith-api-这里我就简单的说下，详细的自己去看下-地址"><a href="#gulp-spritesmith-api-这里我就简单的说下，详细的自己去看下-地址" class="headerlink" title="gulp.spritesmith - api 这里我就简单的说下，详细的自己去看下 地址"></a>gulp.spritesmith - api 这里我就简单的说下，详细的自己去看下 <a href="https://github.com/twolfson/gulp.spritesmith" target="_blank" rel="external">地址</a></h3><blockquote>
+<p>options</p>
 </blockquote>
-<pre><code>imgName 和 cssName 分别表示你合并后点文件名字
-padding 则表示雪碧图里面每个icon 相距的位置
-
-algorithm：他有5个方向 如下图
-</code></pre><p><img src="/assets/blogImg/gulpcsssprite.jpeg" alt=""></p>
+<ul>
+<li><p>imagepath 必填项，sprite背景图源文件夹，只有匹配此路径才会处理，默认 images/slice/</p>
+</li>
+<li><p>imagepath_map 映射CSS中背景路径，支持函数和数组，默认为 null</p>
+</li>
+<li><p>spritedest 必填项，雪碧图输出目录，注意，会覆盖之前文件！默认 images/</p>
+</li>
+<li><p>spritepath 必填项，替换后的背景路径，默认 ../images/</p>
+</li>
+<li><p>padding 可选项，指定各图片间间距，默认 0</p>
+</li>
+<li><p>useimageset 可选项，是否使用 image-set 作为2x图片实现，默认不使用</p>
+</li>
+<li><p>spritestamp 可选项，是否给雪碧图追加时间戳，默认不追加</p>
+</li>
+<li><p>cssstamp 可选项，是否在CSS文件末尾追加时间戳，默认不追加</p>
+</li>
+<li><p>engine 可选项，指定图像处理引擎，默认选择pngsmith</p>
+</li>
+<li><p>algorithm 可选项，指定排列方式，有top-down （从上至下）, left-right（从左至右）, diagonal（从左上至右下）, alt-diagonal （从左下至右上）和 binary-tree（二叉树排列） 五种供选择，默认 binary-tree；参考 Layout</p>
+<p>  algorithm：他有5个方向 如下图<br><img src="/assets/blogImg/gulpcsssprite.jpeg" alt=""></p>
+</li>
+</ul>
 
       
 
@@ -708,11 +726,11 @@ toLowerCase()--&gt;讲字符串的字母转为小写，并返回一个String 类
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">http</a>
+                <a href="javascript:void(0)">杂记</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">杂记</a>
+                <a href="javascript:void(0)">http</a>
               </li>
             
             <div class="clearfix"></div>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.tcspin.com/"/>
-  <updated>2016-12-14T15:32:27.000Z</updated>
+  <updated>2016-12-16T02:46:08.000Z</updated>
   <id>//blog.tcspin.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="//blog.tcspin.com/2016/12/14/gulp-css-sprite/"/>
     <id>//blog.tcspin.com/2016/12/14/gulp-css-sprite/</id>
     <published>2016-12-14T15:21:00.000Z</published>
-    <updated>2016-12-14T15:32:27.000Z</updated>
+    <updated>2016-12-16T02:46:08.000Z</updated>
     
     <content type="html"><![CDATA[<h3 id="1-先建立好目录文件夹，例如我的在build-下"><a href="#1-先建立好目录文件夹，例如我的在build-下" class="headerlink" title="1. 先建立好目录文件夹，例如我的在build 下"></a>1. 先建立好目录文件夹，例如我的在build 下</h3><h3 id="2-建立一个package-json-文件"><a href="#2-建立一个package-json-文件" class="headerlink" title="2.建立一个package.json 文件"></a>2.建立一个package.json 文件</h3><pre><code>（前提是你已经全局安装好了node和全局安装了gulp),你也可以npm init 到该目录下，他会有些选项要你添，填完到保存，就会自动生成一个package.json
 </code></pre><h3 id="3-建立gulpfile-js"><a href="#3-建立gulpfile-js" class="headerlink" title="3.  建立gulpfile.js"></a>3.  建立gulpfile.js</h3><pre><code>gulpfile.js是gulp项目的配置文件，是位于项目根目录的普通js文件（你也可以k将gulpfile.js放入其他文件夹下亦可）。  
@@ -42,14 +42,32 @@ gulp.task(&apos;spritesmith&apos;, function() {
         }))
         .pipe(gulp.dest(&apos;../dist/images/&apos;)); // 输出到
 });
-</code></pre><blockquote>
-<p>gulp.spritesmith - api 这里我就简单的说下，详细的自己去看下 <a href="https://github.com/twolfson/gulp.spritesmith" target="_blank" rel="external">地址</a></p>
+</code></pre><h3 id="gulp-spritesmith-api-这里我就简单的说下，详细的自己去看下-地址"><a href="#gulp-spritesmith-api-这里我就简单的说下，详细的自己去看下-地址" class="headerlink" title="gulp.spritesmith - api 这里我就简单的说下，详细的自己去看下 地址"></a>gulp.spritesmith - api 这里我就简单的说下，详细的自己去看下 <a href="https://github.com/twolfson/gulp.spritesmith" target="_blank" rel="external">地址</a></h3><blockquote>
+<p>options</p>
 </blockquote>
-<pre><code>imgName 和 cssName 分别表示你合并后点文件名字
-padding 则表示雪碧图里面每个icon 相距的位置
-
-algorithm：他有5个方向 如下图
-</code></pre><p><img src="/assets/blogImg/gulpcsssprite.jpeg" alt=""></p>
+<ul>
+<li><p>imagepath 必填项，sprite背景图源文件夹，只有匹配此路径才会处理，默认 images/slice/</p>
+</li>
+<li><p>imagepath_map 映射CSS中背景路径，支持函数和数组，默认为 null</p>
+</li>
+<li><p>spritedest 必填项，雪碧图输出目录，注意，会覆盖之前文件！默认 images/</p>
+</li>
+<li><p>spritepath 必填项，替换后的背景路径，默认 ../images/</p>
+</li>
+<li><p>padding 可选项，指定各图片间间距，默认 0</p>
+</li>
+<li><p>useimageset 可选项，是否使用 image-set 作为2x图片实现，默认不使用</p>
+</li>
+<li><p>spritestamp 可选项，是否给雪碧图追加时间戳，默认不追加</p>
+</li>
+<li><p>cssstamp 可选项，是否在CSS文件末尾追加时间戳，默认不追加</p>
+</li>
+<li><p>engine 可选项，指定图像处理引擎，默认选择pngsmith</p>
+</li>
+<li><p>algorithm 可选项，指定排列方式，有top-down （从上至下）, left-right（从左至右）, diagonal（从左上至右下）, alt-diagonal （从左下至右上）和 binary-tree（二叉树排列） 五种供选择，默认 binary-tree；参考 Layout</p>
+<p>  algorithm：他有5个方向 如下图<br><img src="/assets/blogImg/gulpcsssprite.jpeg" alt=""></p>
+</li>
+</ul>
 ]]></content>
     
     <summary type="html">
