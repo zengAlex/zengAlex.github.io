@@ -160,6 +160,87 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-gulp-css-concat" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/18/gulp-css-concat/">gulp 合并压缩css文件</a>
+    </h1>
+  
+
+        <a href="/2016/12/18/gulp-css-concat/" class="archive-article-date">
+  	<time datetime="2016-12-17T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-18</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>首先需要安装npm 插件 npm install gulp-concat gulp-rename .. –save-dev</p>
+</blockquote>
+<h3 id="直接贴代码"><a href="#直接贴代码" class="headerlink" title="直接贴代码"></a>直接贴代码</h3><pre><code>var gulp = require(&apos;gulp&apos;);
+var concat = require(&apos;gulp-concat&apos;); // 文件合并
+var minifycss = require(&apos;gulp-minify-css&apos;); // css 压缩
+var rename = require(&apos;gulp-rename&apos;); // 文件更名
+var watch  = require(&apos;gulp-watch&apos;);    //文件监听
+var notify = require(&apos;gulp-notify&apos;); //提示信息
+
+// 合并压缩css 文件
+gulp .task(&apos;concatCss&apos;, function(){
+    return gulp.src([&apos;../source/css/normalize.css&apos;,&apos;../source/css/menu.css&apos;,&apos;../source/css/header.css&apos;])
+    .pipe(concat(&apos;index.css&apos;))
+    .pipe(gulp.dest(&apos;../dist/css&apos;))
+    .pipe(rename({ suffix: &apos;.min&apos; }))
+    .pipe(minifycss())
+    .pipe(gulp.dest(&apos;../dist/css&apos;))
+    .pipe(notify({ message: &apos;css index is ok&apos; }));
+});
+</code></pre><blockquote>
+<p>以下解释下这些 代码</p>
+</blockquote>
+<p>1.gulp.src  引入文件, 里面可以是一个数组，也可以直接引入一个目录下的所有文件，如gulp.src(images/*.css),引入所有images 目录下的所有css 文件</p>
+<p>2.pipe(concat(‘index’)), 把所有的文件合并为一个index.css 文件</p>
+<p>3.pipe(gulp.dest(‘../dist/css’)) 把合并后的文件放在dist文件夹的css文件夹下</p>
+<p>4.pipe(minifycss()) 把合并后的文件进行压缩。</p>
+<p>5.pipe(notify({message: ‘string’})) 作一个提示</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端自动化/">前端自动化</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/18/gulp-css-concat/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-gulp-css-sprite" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -726,11 +807,11 @@ toLowerCase()--&gt;讲字符串的字母转为小写，并返回一个String 类
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">杂记</a>
+                <a href="javascript:void(0)">http</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">http</a>
+                <a href="javascript:void(0)">杂记</a>
               </li>
             
             <div class="clearfix"></div>

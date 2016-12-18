@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>//blog.tcspin.com/2016/12/18/gulp-css-concat/</loc>
+    <lastmod>2016-12-18T14:11:52.000Z</lastmod>
+    <data>
+        <display>
+        <title>gulp 合并压缩css文件</title>
+        <pubTime>2016-12-17T16:00:00.000Z</pubTime>
+        
+        <tag>前端自动化</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>//blog.tcspin.com/2016/12/14/gulp-css-sprite/</loc>
     <lastmod>2016-12-16T02:46:08.000Z</lastmod>
     <data>

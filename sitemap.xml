@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>//blog.tcspin.com/2016/12/18/gulp-css-concat/</loc>
+    
+    <lastmod>2016-12-18T14:11:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>//blog.tcspin.com/2016/12/14/gulp-css-sprite/</loc>
     
     <lastmod>2016-12-16T02:46:08.000Z</lastmod>

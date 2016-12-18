@@ -6,17 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//blog.tcspin.com">
-  <title>Archives: 2016/11 | tcspin&#39;blog</title>
+  <title>gulp 合并压缩css文件 | tcspin&#39;blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="毕业于职业院校，热爱前端，爱钻研，目标是全栈工程师">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tcspin'blog">
-<meta property="og:url" content="//blog.tcspin.com/archives/2016/11/index.html">
+  <meta name="description" content="首先需要安装npm 插件 npm install gulp-concat gulp-rename .. –save-dev
+
+直接贴代码var gulp = require(&amp;apos;gulp&amp;apos;);
+var concat = require(&amp;apos;gulp-concat&amp;apos;); // 文件合并
+var minifycss = require(&amp;apos;gulp-min">
+<meta property="og:type" content="article">
+<meta property="og:title" content="gulp 合并压缩css文件">
+<meta property="og:url" content="//blog.tcspin.com/2016/12/18/gulp-css-concat/index.html">
 <meta property="og:site_name" content="tcspin'blog">
-<meta property="og:description" content="毕业于职业院校，热爱前端，爱钻研，目标是全栈工程师">
+<meta property="og:description" content="首先需要安装npm 插件 npm install gulp-concat gulp-rename .. –save-dev
+
+直接贴代码var gulp = require(&amp;apos;gulp&amp;apos;);
+var concat = require(&amp;apos;gulp-concat&amp;apos;); // 文件合并
+var minifycss = require(&amp;apos;gulp-min">
+<meta property="og:updated_time" content="2016-12-18T14:11:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tcspin'blog">
-<meta name="twitter:description" content="毕业于职业院校，热爱前端，爱钻研，目标是全栈工程师">
+<meta name="twitter:title" content="gulp 合并压缩css文件">
+<meta name="twitter:description" content="首先需要安装npm 插件 npm install gulp-concat gulp-rename .. –save-dev
+
+直接贴代码var gulp = require(&amp;apos;gulp&amp;apos;);
+var concat = require(&amp;apos;gulp-concat&amp;apos;); // 文件合并
+var minifycss = require(&amp;apos;gulp-min">
   
     <link rel="alternative" href="/atom.xml" title="tcspin&#39;blog" type="application/atom+xml">
   
@@ -158,54 +171,174 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-gulp-css-concat" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/11/30/h5-meta/" class="archive-article-date">
-  	<time datetime="2016-11-30T14:10:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-30</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/11/30/h5-meta/">H5-meta-and-other</a>
+    <h1 class="article-title" itemprop="name">
+      gulp 合并压缩css文件
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        <a href="/2016/12/18/gulp-css-concat/" class="archive-article-date">
+  	<time datetime="2016-12-17T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-18</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>首先需要安装npm 插件 npm install gulp-concat gulp-rename .. –save-dev</p>
+</blockquote>
+<h3 id="直接贴代码"><a href="#直接贴代码" class="headerlink" title="直接贴代码"></a>直接贴代码</h3><pre><code>var gulp = require(&apos;gulp&apos;);
+var concat = require(&apos;gulp-concat&apos;); // 文件合并
+var minifycss = require(&apos;gulp-minify-css&apos;); // css 压缩
+var rename = require(&apos;gulp-rename&apos;); // 文件更名
+var watch  = require(&apos;gulp-watch&apos;);    //文件监听
+var notify = require(&apos;gulp-notify&apos;); //提示信息
+
+// 合并压缩css 文件
+gulp .task(&apos;concatCss&apos;, function(){
+    return gulp.src([&apos;../source/css/normalize.css&apos;,&apos;../source/css/menu.css&apos;,&apos;../source/css/header.css&apos;])
+    .pipe(concat(&apos;index.css&apos;))
+    .pipe(gulp.dest(&apos;../dist/css&apos;))
+    .pipe(rename({ suffix: &apos;.min&apos; }))
+    .pipe(minifycss())
+    .pipe(gulp.dest(&apos;../dist/css&apos;))
+    .pipe(notify({ message: &apos;css index is ok&apos; }));
+});
+</code></pre><blockquote>
+<p>以下解释下这些 代码</p>
+</blockquote>
+<p>1.gulp.src  引入文件, 里面可以是一个数组，也可以直接引入一个目录下的所有文件，如gulp.src(images/*.css),引入所有images 目录下的所有css 文件</p>
+<p>2.pipe(concat(‘index’)), 把所有的文件合并为一个index.css 文件</p>
+<p>3.pipe(gulp.dest(‘../dist/css’)) 把合并后的文件放在dist文件夹的css文件夹下</p>
+<p>4.pipe(minifycss()) 把合并后的文件进行压缩。</p>
+<p>5.pipe(notify({message: ‘string’})) 作一个提示</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你对我的支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/blogImg/alipay.jpeg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/blogImg/wechatpay.jpeg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/H5/">H5</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端自动化/">前端自动化</a></li></ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKUlEQVR42u3aQW7DMAwEwP7/0ynQU4s09lJUipoenQLHdjQ6MBLJj494PL7G8+fvV57Hq2df3fN8ffPAwMC4LONxOI4Z+VSShUje+ZKKgYFxA0YeZDvhshOsT+aMgYGBcRhG85EvCgYGBkY/4ObbwV0HYAwMDIzkdfkPJG84fvaNZ3EMDIwLMjqFgXd//qP6BgYGxj9mPJbGcYhMNnzVkH0yHwwMjNGMfNOWpOE628fOZhQDA2M2I394LZXWb62Ilh4DA2M0o5oIS2DV8+ba38BJ1hADA2McI0/oVxsjqg0WnfsxMDCmMpJJ9w+61eCbJO9+3ImBgTGa0Q+U+ZYuX6zqHwAGBsZsRjVB1kni7yoDYGBg3I3RCbLVVozkYJy8M0q3YWBgjGN0So+dYmShHyQJuBgYGKMZa0Ewn/RaOF6kYmBgDGUkbROdZov8/nwJMDAw7sPYFWTXygZ5CD5ZegwMjNGM1k3FdH9no7lts4iBgXFZRmcqyUKsrWW5pQMDA+M2jH7Sv19OWCszYGBg3I1RbcKohuNqe8cxHgMD4w6MaiK+UxKopudatQ4MDIwRjL3psLXEWfX6LyQMDIzRjHwk27K8VaKfqqsWMDAwMK7OyENndT+WHErzlgsMDAyMXUF217fVIzEGBgZGNaFWLVVWD8CFVcHAwLgZY61VYkMwzcuWGBgYoxlrB9G1AudaS1lhJTAwMMYxqoWBfn9Hkm6rLjQGBsZQxicJ4jf1+tE0iwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
-  
 
-    
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2016/12/14/gulp-css-sprite/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">gulp-css-sprite</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
 
 
           </div>
@@ -228,8 +361,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

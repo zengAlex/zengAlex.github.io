@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.tcspin.com/"/>
-  <updated>2016-12-16T02:46:08.000Z</updated>
+  <updated>2016-12-18T14:11:52.000Z</updated>
   <id>//blog.tcspin.com/</id>
   
   <author>
@@ -14,6 +14,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>gulp 合并压缩css文件</title>
+    <link href="//blog.tcspin.com/2016/12/18/gulp-css-concat/"/>
+    <id>//blog.tcspin.com/2016/12/18/gulp-css-concat/</id>
+    <published>2016-12-17T16:00:00.000Z</published>
+    <updated>2016-12-18T14:11:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>首先需要安装npm 插件 npm install gulp-concat gulp-rename .. –save-dev</p>
+</blockquote>
+<h3 id="直接贴代码"><a href="#直接贴代码" class="headerlink" title="直接贴代码"></a>直接贴代码</h3><pre><code>var gulp = require(&apos;gulp&apos;);
+var concat = require(&apos;gulp-concat&apos;); // 文件合并
+var minifycss = require(&apos;gulp-minify-css&apos;); // css 压缩
+var rename = require(&apos;gulp-rename&apos;); // 文件更名
+var watch  = require(&apos;gulp-watch&apos;);    //文件监听
+var notify = require(&apos;gulp-notify&apos;); //提示信息
+
+// 合并压缩css 文件
+gulp .task(&apos;concatCss&apos;, function(){
+    return gulp.src([&apos;../source/css/normalize.css&apos;,&apos;../source/css/menu.css&apos;,&apos;../source/css/header.css&apos;])
+    .pipe(concat(&apos;index.css&apos;))
+    .pipe(gulp.dest(&apos;../dist/css&apos;))
+    .pipe(rename({ suffix: &apos;.min&apos; }))
+    .pipe(minifycss())
+    .pipe(gulp.dest(&apos;../dist/css&apos;))
+    .pipe(notify({ message: &apos;css index is ok&apos; }));
+});
+</code></pre><blockquote>
+<p>以下解释下这些 代码</p>
+</blockquote>
+<p>1.gulp.src  引入文件, 里面可以是一个数组，也可以直接引入一个目录下的所有文件，如gulp.src(images/*.css),引入所有images 目录下的所有css 文件</p>
+<p>2.pipe(concat(‘index’)), 把所有的文件合并为一个index.css 文件</p>
+<p>3.pipe(gulp.dest(‘../dist/css’)) 把合并后的文件放在dist文件夹的css文件夹下</p>
+<p>4.pipe(minifycss()) 把合并后的文件进行压缩。</p>
+<p>5.pipe(notify({message: ‘string’})) 作一个提示</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;首先需要安装npm 插件 npm install gulp-concat gulp-rename .. –save-dev&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;直接贴代码&quot;&gt;&lt;a href=&quot;#直接贴代码&quot; class=&quot;heade
+    
+    </summary>
+    
+    
+      <category term="前端自动化" scheme="//blog.tcspin.com/tags/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>gulp-css-sprite</title>
