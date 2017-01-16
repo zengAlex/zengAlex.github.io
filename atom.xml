@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.tcspin.com/"/>
-  <updated>2016-12-18T14:11:52.000Z</updated>
+  <updated>2017-01-16T07:13:06.000Z</updated>
   <id>//blog.tcspin.com/</id>
   
   <author>
@@ -14,6 +14,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>css</title>
+    <link href="//blog.tcspin.com/2017/01/16/css/"/>
+    <id>//blog.tcspin.com/2017/01/16/css/</id>
+    <published>2017-01-15T16:00:00.000Z</published>
+    <updated>2017-01-16T07:13:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="媒体查询-media"><a href="#媒体查询-media" class="headerlink" title="媒体查询 (media)"></a>媒体查询 (media)</h3><pre><code>// 横屏 
+@media screen and (orientation:landscape){
+
+}
+// 竖屏
+@media screen and (orientation:portrait){
+
+}
+// 窗口宽度&lt;960,设计宽度=768
+@media screen and (max-width:959px){
+
+}
+// 窗口宽度&lt;768,设计宽度=640
+@media screen and (max-width:767px){
+
+}
+// 窗口宽度&lt;640,设计宽度=480
+@media screen and (max-width:639px){
+
+}
+// 窗口宽度&lt;480,设计宽度=320
+@media screen and (max-width:479px){
+
+}
+// windows UI 贴靠
+@media screen and (-ms-view-state:snapped){
+
+}
+// 打印
+@media print{
+
+}
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;媒体查询-media&quot;&gt;&lt;a href=&quot;#媒体查询-media&quot; class=&quot;headerlink&quot; title=&quot;媒体查询 (media)&quot;&gt;&lt;/a&gt;媒体查询 (media)&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;// 横屏 
+@media screen and (
+    
+    </summary>
+    
+    
+      <category term="css" scheme="//blog.tcspin.com/tags/css/"/>
+    
+  </entry>
   
   <entry>
     <title>gulp 合并压缩css文件</title>
