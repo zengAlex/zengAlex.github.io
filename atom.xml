@@ -69,6 +69,48 @@
   </entry>
   
   <entry>
+    <title>regExp</title>
+    <link href="//blog.tcspin.com/2016/12/29/regExp/"/>
+    <id>//blog.tcspin.com/2016/12/29/regExp/</id>
+    <published>2016-12-29T15:44:00.000Z</published>
+    <updated>2017-01-16T02:20:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<ul>
+<li>正则表达式（regular expression）缩写：regexp regex</li>
+</ul>
+<h4 id="正则用途"><a href="#正则用途" class="headerlink" title="正则用途"></a>正则用途</h4><ul>
+<li>字符的匹配／搜索／替换</li>
+<li>数据验证</li>
+</ul>
+<h4 id="正则记录"><a href="#正则记录" class="headerlink" title="正则记录"></a>正则记录</h4><pre><code>1. /^[1-9]\d*$/   //匹配正整数
+2. /[^\d^\.]+/;  //匹配非数字的
+</code></pre><h4 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h4><pre><code>&lt;input id=&quot;input-val&quot; /&gt;
+//去除非数字符号
+$(&quot;#input-val&quot;).on(&quot;keyup&quot;, function(){
+    var regx = /^[1-9]\d*$/; //匹配数字
+    var str = /[^\d^\.]+/;  //匹配非数字
+    if( !regx.test($(this).val()) ){
+        var rVal =  $(this).val().replace(str,&apos;&apos;);
+        $(this).val(rVal);
+       }
+      });
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;正则表达式（regular expression）缩写：regexp regex&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;正则用途&quot;&gt;&lt;a href=&quot;#正则用途&quot; class=&quot;headerlink&quot; title=&quot;正则用途&quot;&gt;&lt;/a&gt;正则用途&lt;/h4&gt;&lt;ul&gt;
+    
+    </summary>
+    
+    
+      <category term="正则" scheme="//blog.tcspin.com/tags/%E6%AD%A3%E5%88%99/"/>
+    
+  </entry>
+  
+  <entry>
     <title>gulp 合并压缩css文件</title>
     <link href="//blog.tcspin.com/2016/12/18/gulp-css-concat/"/>
     <id>//blog.tcspin.com/2016/12/18/gulp-css-concat/</id>

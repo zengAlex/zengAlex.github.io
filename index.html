@@ -245,6 +245,78 @@
 
 
   
+    <article id="post-regExp" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/29/regExp/">regExp</a>
+    </h1>
+  
+
+        <a href="/2016/12/29/regExp/" class="archive-article-date">
+  	<time datetime="2016-12-29T15:44:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-29</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>正则表达式（regular expression）缩写：regexp regex</li>
+</ul>
+<h4 id="正则用途"><a href="#正则用途" class="headerlink" title="正则用途"></a>正则用途</h4><ul>
+<li>字符的匹配／搜索／替换</li>
+<li>数据验证</li>
+</ul>
+<h4 id="正则记录"><a href="#正则记录" class="headerlink" title="正则记录"></a>正则记录</h4><pre><code>1. /^[1-9]\d*$/   //匹配正整数
+2. /[^\d^\.]+/;  //匹配非数字的
+</code></pre><h4 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h4><pre><code>&lt;input id=&quot;input-val&quot; /&gt;
+//去除非数字符号
+$(&quot;#input-val&quot;).on(&quot;keyup&quot;, function(){
+    var regx = /^[1-9]\d*$/; //匹配数字
+    var str = /[^\d^\.]+/;  //匹配非数字
+    if( !regx.test($(this).val()) ){
+        var rVal =  $(this).val().replace(str,&apos;&apos;);
+        $(this).val(rVal);
+       }
+      });
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/正则/">正则</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/12/29/regExp/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-gulp-css-concat" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -892,15 +964,19 @@ toLowerCase()--&gt;讲字符串的字母转为小写，并返回一个String 类
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)">H5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">http</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">杂记</a>
+                <a href="javascript:void(0)">正则</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">H5</a>
+                <a href="javascript:void(0)">杂记</a>
               </li>
             
             <div class="clearfix"></div>
