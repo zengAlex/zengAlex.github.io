@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//blog.tcspin.com/"/>
-  <updated>2017-01-16T07:13:06.000Z</updated>
+  <updated>2017-03-08T14:35:05.000Z</updated>
   <id>//blog.tcspin.com/</id>
   
   <author>
@@ -14,6 +14,159 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决遇到的问题</title>
+    <link href="//blog.tcspin.com/2017/03/08/repost/"/>
+    <id>//blog.tcspin.com/2017/03/08/repost/</id>
+    <published>2017-03-07T16:00:00.000Z</published>
+    <updated>2017-03-08T14:35:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="使用zclip-实现复制功能"><a href="#使用zclip-实现复制功能" class="headerlink" title="使用zclip 实现复制功能"></a>使用zclip 实现复制功能</h3><pre><code>1、父层元素不能为display: none;
+2、且要在有本地服务器或者线上的状态，才能调试
+</code></pre><h3 id="监听H5微信页面的返回事件"><a href="#监听H5微信页面的返回事件" class="headerlink" title="监听H5微信页面的返回事件"></a>监听H5微信页面的返回事件</h3><p>在页面中我们可以使用JavaScript window history，后退到前面页面，但是由于安全原因javascript不允许修改history里已有的url链接，但可以使用pushState方法往history里增加url链接，并且提供popstate事件监测从history栈里弹出url。既然有提供popstate事件监测，那么我们就可以进行监听。</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+    (function(){  
+        // alert(2);
+        // 在微信下histpry的方法下
+        pushHistory();  
+        var bool=false;  
+        setTimeout(function(){  
+              bool=true;  
+        },1500);  
+        window.addEventListener(&quot;popstate&quot;, function(e) {  
+          if(bool)  
+            {  
+                window.location.href = document.referrer//根据自己的需求实现自己的功能  
+            }  
+            pushHistory();      
+
+    }, false); 
+    //设置url 为# 时会刷新页面
+    function pushHistory() {    
+             var state = {    
+                 title: &quot;title&quot;,    
+                 url: &quot;#&quot;    
+             };    
+             window.history.pushState(state, &quot;title&quot;, &quot;#&quot;);    
+         }     
+    })();  
+&lt;/script&gt;
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;使用zclip-实现复制功能&quot;&gt;&lt;a href=&quot;#使用zclip-实现复制功能&quot; class=&quot;headerlink&quot; title=&quot;使用zclip 实现复制功能&quot;&gt;&lt;/a&gt;使用zclip 实现复制功能&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;1、父层元素不能为displ
+    
+    </summary>
+    
+    
+      <category term="other" scheme="//blog.tcspin.com/tags/other/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="//blog.tcspin.com/2017/03/01/about_v2/"/>
+    <id>//blog.tcspin.com/2017/03/01/about_v2/</id>
+    <published>2017-03-01T14:51:31.000Z</published>
+    <updated>2017-03-08T14:29:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h2><ul>
+<li>曾灿心/男/1992年</li>
+<li>个人网站：<a href="http://blog.tcspin.com" target="_blank" rel="external">http://blog.tcspin.com</a></li>
+<li>github: <a href="https://github.com/zengAlex" target="_blank" rel="external">https://github.com/zengAlex</a></li>
+<li>期望职位：Web前端开发工程师</li>
+<li>期望城市：广深</li>
+<li>2016年6月-毕业于广东工贸职业技术学院-软件工程专业</li>
+</ul>
+<h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><ul>
+<li>手机：18819478704</li>
+<li>邮箱：1019552800@qq.com </li>
+</ul>
+<h2 id="工作经历"><a href="#工作经历" class="headerlink" title="工作经历"></a>工作经历</h2><h3 id="广州欢拓网络科技有限公司（2015年7月至今）-前端开发工程师"><a href="#广州欢拓网络科技有限公司（2015年7月至今）-前端开发工程师" class="headerlink" title="广州欢拓网络科技有限公司（2015年7月至今） 前端开发工程师"></a>广州欢拓网络科技有限公司（2015年7月至今） 前端开发工程师</h3><blockquote>
+<p> 开讲课堂（前端负责人）（2016.06月至今）</p>
+</blockquote>
+<pre><code>- 主要参与项目方案的制定和跟主管商讨前期技术的准备，负责开讲项目的移动端H5开发，PC Web端开发，为每个独立的讲师搭建一个知识变现的平台（因为人手不够，这些都是我自己写的）。
+
+1. 使用GitLab 对代码进行管理；
+2. 使用sea.js 实现JS模块化；
+3. 使用tmod.js 实现前端模板预编译，用less预编译处理css；
+4. 使用gulp 来实现对js,css文件的压缩和制作雪碧图；
+5. 使用animate.css  + js 使用一些交互效果；
+6. 使用MacDown来写 md文档，每个项目写清楚文档方便与后台对接。
+</code></pre><blockquote>
+<p>开讲H5活动页 （2017.01.20 - 2017.01.22）</p>
+</blockquote>
+<pre><code>- 项目主要让用户上传10秒的新年地方特色视频集
+
+1.使用sea.js，对js 文件的模块化管理；
+2.为了体验更好，使用ajax先把数据请求回来，再进行拆分，封装成一个数组，每次加载都是本地的资源，减少了对服务器的请求，用户的体验也大大加快了。
+</code></pre><blockquote>
+<p>直播页PC/H5端 功能模块的开发    （2016.03 - 2016.04）</p>
+</blockquote>
+<pre><code>- 为直播页定制一些功能模块如（打赏、抽奖、评分模块）
+
+1.使用less 预处理模块化CSS文件；
+2.使用预编译模板tmod.js 处理功能模块；
+3.每个模块的设计都是解耦的互不影响，需要到就template 进来。
+
+使得页面的加载速度有很好的提升，用户体验也更好，代码的维护成本相对降低了很多。
+</code></pre><blockquote>
+<p>新版PC/H5 官网（2015.12 - 2016.01）</p>
+</blockquote>
+<pre><code>根据设计图，设计页面结构，主要参与用户体验的设计、交互设计与实现。
+
+1.采用H5新属性实现页面标签结构，使用CSS3动画实现页面部分效果；
+2.所有大图都必须先进行保真压缩，icon 全部合并成 sprite图；
+3.使用SVN管理代码；
+</code></pre><blockquote>
+<p>重构PC开发后台（2015.09 - 2015.10）</p>
+</blockquote>
+<pre><code>1.把页面结构解耦，分拆为多个模块，公用的地方拆分为宏模块；
+2.使用gulp 压缩JS,生成sprite图片，合并css,减少请求；
+3.优化代码结构，尽量减少页面DOM，优化meta标签，提高SEO。
+4.用CSS3实现动画
+</code></pre><h2 id="专业技能"><a href="#专业技能" class="headerlink" title="专业技能"></a>专业技能</h2><ul>
+<li>熟悉W3C标准，能书写语义合理，易维护的HTML结构，代码整洁，注释清晰。</li>
+<li>熟用Fiddler，Chrome，nproxy 调试工具。</li>
+<li>处理过多种浏览器兼容问题，对性能优化，功能模块组件化和模板分离都有较好的实践。</li>
+<li>熟练掌握HTML5/CSS3/JQuery, zepto。</li>
+<li>擅于使用gulp做自动化处理。</li>
+<li>熟练使用SCSS,LESS等预处理工具。</li>
+<li>用sea.js开发过多个项目。</li>
+<li>用Vue+webpack+vue 产品使用帮助中心。</li>
+<li>熟练使用git和SVN工具来进行协同工作。</li>
+<li>会使用Sketch，PhotoShop，图片处理软件，有一定审美能力</li>
+<li>了解并能使用Ajax</li>
+<li>了解SEO的重要性。</li>
+<li>了解和使用过node.js,主要用于搭建本地服务器和爬虫。</li>
+</ul>
+<h2 id="作品展示"><a href="#作品展示" class="headerlink" title="作品展示"></a>作品展示</h2><ul>
+<li><a href="http://www.talk-fun.com/" target="_blank" rel="external">http://www.talk-fun.com/</a>  欢拓官网（PC/H5）</li>
+<li><a href="http://kai.talk-fun.com/activity/newyear" target="_blank" rel="external">http://kai.talk-fun.com/activity/newyear</a> 新年活动专页（限移动端访问）</li>
+<li><a href="http://open.talk-fun.com/" target="_blank" rel="external">http://open.talk-fun.com/</a> 开发后台</li>
+</ul>
+<h2 id="兴趣爱好"><a href="#兴趣爱好" class="headerlink" title="兴趣爱好"></a>兴趣爱好</h2><ul>
+<li>喜欢分享，相信在为别人讲解的过程中也能提升自己。</li>
+<li>喜欢看书，技术类，漫画类，心理类。</li>
+<li>热爱设计，喜欢阅读各类设计相关杂志和书籍;热爱运动，喜欢打篮球。</li>
+</ul>
+<h2 id="自我描述"><a href="#自我描述" class="headerlink" title="自我描述"></a>自我描述</h2><p>  做事认真、负责、注重细节、有点强迫症，喜欢钻研新技术，喜欢跟同事讨论和分享心得，工作时最看重的是团队的合作，才能让工作高效率化。</p>
+<h2 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h2><p> 目前除了在加强基础能力外，还在自学Electron、PHP和素描，希望能更加丰富自己的生活，做一只积极向上的的程序猿。</p>
+<h2 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h2><p>感谢您花时间阅读我的简历，期待能有机会和您共事，共同经历。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;个人信息&quot;&gt;&lt;a href=&quot;#个人信息&quot; class=&quot;headerlink&quot; title=&quot;个人信息&quot;&gt;&lt;/a&gt;个人信息&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;曾灿心/男/1992年&lt;/li&gt;
+&lt;li&gt;个人网站：&lt;a href=&quot;http://blog.tcspin.co
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>css</title>
