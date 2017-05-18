@@ -6,17 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//blog.tcspin.com">
-  <title>Archives: 2016/12 | tcspin&#39;blog</title>
+  <title>基础巩固点 | tcspin&#39;blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="毕业于职业院校，热爱前端，爱钻研，目标是全栈工程师">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tcspin'blog">
-<meta property="og:url" content="//blog.tcspin.com/archives/2016/12/index.html">
+  <meta name="description" content="css 中除了 会使元素隐藏，还有多少种办法&amp;lt;div class=&amp;quot;hide&amp;quot; &amp;gt;&amp;lt;/div&amp;gt;
+     opacity: 0; (第一种设置透明度，但还占着位置)
+     display: none; (第二种同样会隐藏，不占任何位置。)
+     Visibility: hidden (第三中类似第一种，但是visibity可以跟用户交互)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基础巩固点">
+<meta property="og:url" content="//blog.tcspin.com/2017/03/11/原理探究/index.html">
 <meta property="og:site_name" content="tcspin'blog">
-<meta property="og:description" content="毕业于职业院校，热爱前端，爱钻研，目标是全栈工程师">
+<meta property="og:description" content="css 中除了 会使元素隐藏，还有多少种办法&amp;lt;div class=&amp;quot;hide&amp;quot; &amp;gt;&amp;lt;/div&amp;gt;
+     opacity: 0; (第一种设置透明度，但还占着位置)
+     display: none; (第二种同样会隐藏，不占任何位置。)
+     Visibility: hidden (第三中类似第一种，但是visibity可以跟用户交互)">
+<meta property="og:updated_time" content="2017-03-15T02:18:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tcspin'blog">
-<meta name="twitter:description" content="毕业于职业院校，热爱前端，爱钻研，目标是全栈工程师">
+<meta name="twitter:title" content="基础巩固点">
+<meta name="twitter:description" content="css 中除了 会使元素隐藏，还有多少种办法&amp;lt;div class=&amp;quot;hide&amp;quot; &amp;gt;&amp;lt;/div&amp;gt;
+     opacity: 0; (第一种设置透明度，但还占着位置)
+     display: none; (第二种同样会隐藏，不占任何位置。)
+     Visibility: hidden (第三中类似第一种，但是visibity可以跟用户交互)">
   
     <link rel="alternative" href="/atom.xml" title="tcspin&#39;blog" type="application/atom+xml">
   
@@ -158,182 +168,227 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-原理探究" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      基础巩固点
+    </h1>
+  
+
+        <a href="/2017/03/11/原理探究/" class="archive-article-date">
+  	<time datetime="2017-03-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-11</time>
+</a>
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="css-中除了-会使元素隐藏，还有多少种办法"><a href="#css-中除了-会使元素隐藏，还有多少种办法" class="headerlink" title="css 中除了 会使元素隐藏，还有多少种办法"></a>css 中除了 会使元素隐藏，还有多少种办法</h3><pre><code>&lt;div class=&quot;hide&quot; &gt;&lt;/div&gt;
+     opacity: 0; (第一种设置透明度，但还占着位置)
+     display: none; (第二种同样会隐藏，不占任何位置。)
+     Visibility: hidden (第三中类似第一种，但是visibity可以跟用户交互)
+     position: absolute,top+left 值设置为 -9999px 偏离以达到隐藏的作用
+     Clip-path： polygon(0px 0px,0px 0px,0px 0px,0px 0px);（这个属性用的比较少）
+</code></pre><h3 id="mac-全局更新webpack到2-x版本"><a href="#mac-全局更新webpack到2-x版本" class="headerlink" title="mac 全局更新webpack到2.x版本"></a>mac 全局更新webpack到2.x版本</h3><pre><code>sudo npm update webpack -g
+</code></pre><p>了解Promise</p>
+<pre><code>@-webkit-keyframes width-change {0%,100%{width: 320px} 50%{width:260px}}
+.ellipsis {
+    position: relative;
+    background: rgb(230, 230, 230);
+    width: 260px;
+    max-height: 108px; /* h*n */
+    line-height: 18px; /* h */
+    overflow: hidden;
+    -webkit-animation: width-change 8s ease infinite;
+}
+.ellipsis-container {
+    position: relative;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6; /* n */
+    font-size: 50px; /* w */
+    color: transparent;
+}
+.ellipsis-content {
+    color: #000;
+    display: inline;
+    vertical-align: top;
+    font-size: 12px; /* f */
+}
+.ellipsis-ghost {
+    position:absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    color: #000;
+}
+.ellipsis-ghost:before {
+    content: &quot;&quot;;
+    display: block;
+    float: right;
+    width: 50%;
+    height: 100%;
+}
+.ellipsis-placeholder {
+    content: &quot;&quot;;
+    display: block;
+    float: right;
+    width: 50%;
+    height: 108px; /* h*n */
+}
+.ellipsis-more {
+    float: right;
+    font-size: 12px; /* f */
+    width: 50px; /* w */
+    height: 18px; /* h */
+    margin-top: -18px; /* -h */
+}
+
+&lt;div class=&quot;ellipsis&quot;&gt;
+    &lt;div class=&quot;ellipsis-container&quot;&gt;
+        &lt;div class=&quot;ellipsis-content&quot;&gt;腾讯成立于1998年11月，是目前中国领先的互联网增值服务提供商之一。成立10多年来，腾讯一直秉承“一切以用户价值为依归”的经营理念，为亿级海量用户提供稳定优质的各类服务，始终处于稳健发展状态。2004年6月16日，腾讯控股有限公司在香港联交所主板公开上市(股票代号700)。&lt;/div&gt;
+        &lt;div class=&quot;ellipsis-ghost&quot;&gt;
+            &lt;div class=&quot;ellipsis-placeholder&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;ellipsis-more&quot;&gt;...更多&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;   
+</code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你对我的支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/blogImg/alipay.jpeg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/blogImg/wechatpay.jpeg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/29/regExp/" class="archive-article-date">
-  	<time datetime="2016-12-29T15:44:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/29/regExp/">regExp</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/正则/">正则</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础点/">基础点</a></li></ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://blog.tcspin.com/2017/03/11/原理探究/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/18/gulp-css-concat/" class="archive-article-date">
-  	<time datetime="2016-12-17T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/18/gulp-css-concat/">gulp 合并压缩css文件</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端自动化/">前端自动化</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/14/gulp-css-sprite/" class="archive-article-date">
-  	<time datetime="2016-12-14T15:21:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-14</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/14/gulp-css-sprite/">gulp-css-sprite</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端自动化/">前端自动化</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/04/http-Knowledge/" class="archive-article-date">
-  	<time datetime="2016-12-04T06:12:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/04/http-Knowledge/">学习 http</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http/">http</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/01/pc-window-open/" class="archive-article-date">
-  	<time datetime="2016-12-01T11:50:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/01/pc-window-open/">pc-window-open</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂记/">杂记</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+    <a href="/2017/03/15/启动 nginx服务/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          os  10.12.2 安装nginx + php7 +mysql
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/03/08/repost/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">解决遇到的问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
+</nav>
 
-    
+
+
+
+
+
+
 
 
           </div>
@@ -356,8 +411,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

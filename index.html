@@ -160,6 +160,194 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-启动 nginx服务" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/15/启动 nginx服务/">os  10.12.2 安装nginx + php7 +mysql</a>
+    </h1>
+  
+
+        <a href="/2017/03/15/启动 nginx服务/" class="archive-article-date">
+  	<time datetime="2017-03-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-15</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.首先安装brew 包管理</p>
+<p>/usr/bin/ruby -e “$(curl -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/master/install" target="_blank" rel="external">https://raw.githubusercontent.com/Homebrew/install/master/install</a>)”</p>
+<p>2.安装nginx</p>
+<p>brew install –with-http2 nginx</p>
+<p>2.1  vim /usr/local/etc/nginx/nginx.conf</p>
+<h1 id="启动-nginx服务"><a href="#启动-nginx服务" class="headerlink" title="启动 nginx服务"></a>启动 nginx服务</h1><p>sudo nginx</p>
+<h1 id="重新加载配置-重启-停止-退出-nginx"><a href="#重新加载配置-重启-停止-退出-nginx" class="headerlink" title="重新加载配置|重启|停止|退出 nginx"></a>重新加载配置|重启|停止|退出 nginx</h1><p>sudo nginx -s reload|reopen|stop|quit</p>
+<p>配置nginx php 环境<br>找到  nginx.conf 配置PHP 开发</p>
+<p>参考地址：<a href="http://blog.jobbole.com/50121/" target="_blank" rel="external">http://blog.jobbole.com/50121/</a><br>参考地址：<a href="http://blog.martinfjordvald.com/2012/08/understanding-the-nginx-configuration-inheritance-model/" target="_blank" rel="external">http://blog.martinfjordvald.com/2012/08/understanding-the-nginx-configuration-inheritance-model/</a></p>
+<p>参考地址：<a href="https://segmentfault.com/a/1190000005090828#articleHeader0" target="_blank" rel="external">https://segmentfault.com/a/1190000005090828#articleHeader0</a><br>参考地址：<a href="https://www.imqia.me/blog/article.html?number=1" target="_blank" rel="external">https://www.imqia.me/blog/article.html?number=1</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后端/">后端</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/15/启动 nginx服务/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
+    <article id="post-原理探究" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/11/原理探究/">基础巩固点</a>
+    </h1>
+  
+
+        <a href="/2017/03/11/原理探究/" class="archive-article-date">
+  	<time datetime="2017-03-10T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-11</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="css-中除了-会使元素隐藏，还有多少种办法"><a href="#css-中除了-会使元素隐藏，还有多少种办法" class="headerlink" title="css 中除了 会使元素隐藏，还有多少种办法"></a>css 中除了 会使元素隐藏，还有多少种办法</h3><pre><code>&lt;div class=&quot;hide&quot; &gt;&lt;/div&gt;
+     opacity: 0; (第一种设置透明度，但还占着位置)
+     display: none; (第二种同样会隐藏，不占任何位置。)
+     Visibility: hidden (第三中类似第一种，但是visibity可以跟用户交互)
+     position: absolute,top+left 值设置为 -9999px 偏离以达到隐藏的作用
+     Clip-path： polygon(0px 0px,0px 0px,0px 0px,0px 0px);（这个属性用的比较少）
+</code></pre><h3 id="mac-全局更新webpack到2-x版本"><a href="#mac-全局更新webpack到2-x版本" class="headerlink" title="mac 全局更新webpack到2.x版本"></a>mac 全局更新webpack到2.x版本</h3><pre><code>sudo npm update webpack -g
+</code></pre><p>了解Promise</p>
+<pre><code>@-webkit-keyframes width-change {0%,100%{width: 320px} 50%{width:260px}}
+.ellipsis {
+    position: relative;
+    background: rgb(230, 230, 230);
+    width: 260px;
+    max-height: 108px; /* h*n */
+    line-height: 18px; /* h */
+    overflow: hidden;
+    -webkit-animation: width-change 8s ease infinite;
+}
+.ellipsis-container {
+    position: relative;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6; /* n */
+    font-size: 50px; /* w */
+    color: transparent;
+}
+.ellipsis-content {
+    color: #000;
+    display: inline;
+    vertical-align: top;
+    font-size: 12px; /* f */
+}
+.ellipsis-ghost {
+    position:absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    color: #000;
+}
+.ellipsis-ghost:before {
+    content: &quot;&quot;;
+    display: block;
+    float: right;
+    width: 50%;
+    height: 100%;
+}
+.ellipsis-placeholder {
+    content: &quot;&quot;;
+    display: block;
+    float: right;
+    width: 50%;
+    height: 108px; /* h*n */
+}
+.ellipsis-more {
+    float: right;
+    font-size: 12px; /* f */
+    width: 50px; /* w */
+    height: 18px; /* h */
+    margin-top: -18px; /* -h */
+}
+
+&lt;div class=&quot;ellipsis&quot;&gt;
+    &lt;div class=&quot;ellipsis-container&quot;&gt;
+        &lt;div class=&quot;ellipsis-content&quot;&gt;腾讯成立于1998年11月，是目前中国领先的互联网增值服务提供商之一。成立10多年来，腾讯一直秉承“一切以用户价值为依归”的经营理念，为亿级海量用户提供稳定优质的各类服务，始终处于稳健发展状态。2004年6月16日，腾讯控股有限公司在香港联交所主板公开上市(股票代号700)。&lt;/div&gt;
+        &lt;div class=&quot;ellipsis-ghost&quot;&gt;
+            &lt;div class=&quot;ellipsis-placeholder&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;ellipsis-more&quot;&gt;...更多&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;   
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础点/">基础点</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/11/原理探究/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-repost" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1039,10 +1227,6 @@ toLowerCase()--&gt;讲字符串的字母转为小写，并返回一个String 类
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">前端自动化</a>
               </li>
              
@@ -1051,7 +1235,7 @@ toLowerCase()--&gt;讲字符串的字母转为小写，并返回一个String 类
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)">杂记</a>
+                <a href="javascript:void(0)">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1063,7 +1247,19 @@ toLowerCase()--&gt;讲字符串的字母转为小写，并返回一个String 类
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)">杂记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">后端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)">other</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">基础点</a>
               </li>
             
             <div class="clearfix"></div>

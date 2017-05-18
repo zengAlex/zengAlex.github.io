@@ -6,17 +6,33 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//blog.tcspin.com">
-  <title>Archives: 2016/12 | tcspin&#39;blog</title>
+  <title>os  10.12.2 安装nginx + php7 +mysql | tcspin&#39;blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="毕业于职业院校，热爱前端，爱钻研，目标是全栈工程师">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tcspin'blog">
-<meta property="og:url" content="//blog.tcspin.com/archives/2016/12/index.html">
+  <meta name="description" content="1.首先安装brew 包管理
+/usr/bin/ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”
+2.安装nginx
+brew install –with-http2 nginx
+2.1  vim /usr/local/etc/nginx/nginx.conf
+启动 n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="os  10.12.2 安装nginx + php7 +mysql">
+<meta property="og:url" content="//blog.tcspin.com/2017/03/15/启动 nginx服务/index.html">
 <meta property="og:site_name" content="tcspin'blog">
-<meta property="og:description" content="毕业于职业院校，热爱前端，爱钻研，目标是全栈工程师">
+<meta property="og:description" content="1.首先安装brew 包管理
+/usr/bin/ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”
+2.安装nginx
+brew install –with-http2 nginx
+2.1  vim /usr/local/etc/nginx/nginx.conf
+启动 n">
+<meta property="og:updated_time" content="2017-03-15T03:57:46.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tcspin'blog">
-<meta name="twitter:description" content="毕业于职业院校，热爱前端，爱钻研，目标是全栈工程师">
+<meta name="twitter:title" content="os  10.12.2 安装nginx + php7 +mysql">
+<meta name="twitter:description" content="1.首先安装brew 包管理
+/usr/bin/ruby -e “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)”
+2.安装nginx
+brew install –with-http2 nginx
+2.1  vim /usr/local/etc/nginx/nginx.conf
+启动 n">
   
     <link rel="alternative" href="/atom.xml" title="tcspin&#39;blog" type="application/atom+xml">
   
@@ -158,182 +174,156 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-启动 nginx服务" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      os  10.12.2 安装nginx + php7 +mysql
+    </h1>
+  
+
+        <a href="/2017/03/15/启动 nginx服务/" class="archive-article-date">
+  	<time datetime="2017-03-14T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-15</time>
+</a>
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.首先安装brew 包管理</p>
+<p>/usr/bin/ruby -e “$(curl -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/master/install" target="_blank" rel="external">https://raw.githubusercontent.com/Homebrew/install/master/install</a>)”</p>
+<p>2.安装nginx</p>
+<p>brew install –with-http2 nginx</p>
+<p>2.1  vim /usr/local/etc/nginx/nginx.conf</p>
+<h1 id="启动-nginx服务"><a href="#启动-nginx服务" class="headerlink" title="启动 nginx服务"></a>启动 nginx服务</h1><p>sudo nginx</p>
+<h1 id="重新加载配置-重启-停止-退出-nginx"><a href="#重新加载配置-重启-停止-退出-nginx" class="headerlink" title="重新加载配置|重启|停止|退出 nginx"></a>重新加载配置|重启|停止|退出 nginx</h1><p>sudo nginx -s reload|reopen|stop|quit</p>
+<p>配置nginx php 环境<br>找到  nginx.conf 配置PHP 开发</p>
+<p>参考地址：<a href="http://blog.jobbole.com/50121/" target="_blank" rel="external">http://blog.jobbole.com/50121/</a><br>参考地址：<a href="http://blog.martinfjordvald.com/2012/08/understanding-the-nginx-configuration-inheritance-model/" target="_blank" rel="external">http://blog.martinfjordvald.com/2012/08/understanding-the-nginx-configuration-inheritance-model/</a></p>
+<p>参考地址：<a href="https://segmentfault.com/a/1190000005090828#articleHeader0" target="_blank" rel="external">https://segmentfault.com/a/1190000005090828#articleHeader0</a><br>参考地址：<a href="https://www.imqia.me/blog/article.html?number=1" target="_blank" rel="external">https://www.imqia.me/blog/article.html?number=1</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你对我的支持<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/blogImg/alipay.jpeg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/blogImg/wechatpay.jpeg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/29/regExp/" class="archive-article-date">
-  	<time datetime="2016-12-29T15:44:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/29/regExp/">regExp</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/正则/">正则</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后端/">后端</a></li></ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://blog.tcspin.com/2017/03/15/启动 nginx服务/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/18/gulp-css-concat/" class="archive-article-date">
-  	<time datetime="2016-12-17T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/18/gulp-css-concat/">gulp 合并压缩css文件</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端自动化/">前端自动化</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/14/gulp-css-sprite/" class="archive-article-date">
-  	<time datetime="2016-12-14T15:21:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/14/gulp-css-sprite/">gulp-css-sprite</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端自动化/">前端自动化</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/04/http-Knowledge/" class="archive-article-date">
-  	<time datetime="2016-12-04T06:12:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/04/http-Knowledge/">学习 http</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http/">http</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/12/01/pc-window-open/" class="archive-article-date">
-  	<time datetime="2016-12-01T11:50:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/12/01/pc-window-open/">pc-window-open</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/杂记/">杂记</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/03/11/原理探究/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">基础巩固点</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
+</nav>
 
-    
+
+
+
+
+
+
 
 
           </div>
@@ -356,8 +346,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
