@@ -4,9 +4,9 @@
   <subtitle>望不负期盼</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="//blog.tcspin.com/"/>
+  <link href="/"/>
   <updated>2017-03-15T03:57:46.000Z</updated>
-  <id>//blog.tcspin.com/</id>
+  <id>/</id>
   
   <author>
     <name>canxin Zeng</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>os  10.12.2 安装nginx + php7 +mysql</title>
-    <link href="//blog.tcspin.com/2017/03/15/%E5%90%AF%E5%8A%A8%20nginx%E6%9C%8D%E5%8A%A1/"/>
-    <id>//blog.tcspin.com/2017/03/15/启动 nginx服务/</id>
+    <link href="/2017/03/15/%E5%90%AF%E5%8A%A8%20nginx%E6%9C%8D%E5%8A%A1/"/>
+    <id>/2017/03/15/启动 nginx服务/</id>
     <published>2017-03-14T16:00:00.000Z</published>
     <updated>2017-03-15T03:57:46.000Z</updated>
     
@@ -42,14 +42,14 @@
     </summary>
     
     
-      <category term="后端" scheme="//blog.tcspin.com/tags/%E5%90%8E%E7%AB%AF/"/>
+      <category term="后端" scheme="/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>基础巩固点</title>
-    <link href="//blog.tcspin.com/2017/03/11/%E5%8E%9F%E7%90%86%E6%8E%A2%E7%A9%B6/"/>
-    <id>//blog.tcspin.com/2017/03/11/原理探究/</id>
+    <link href="/2017/03/11/%E5%8E%9F%E7%90%86%E6%8E%A2%E7%A9%B6/"/>
+    <id>/2017/03/11/原理探究/</id>
     <published>2017-03-10T16:00:00.000Z</published>
     <updated>2017-03-15T02:18:28.000Z</updated>
     
@@ -134,14 +134,14 @@
     </summary>
     
     
-      <category term="基础点" scheme="//blog.tcspin.com/tags/%E5%9F%BA%E7%A1%80%E7%82%B9/"/>
+      <category term="基础点" scheme="/tags/%E5%9F%BA%E7%A1%80%E7%82%B9/"/>
     
   </entry>
   
   <entry>
     <title>解决遇到的问题</title>
-    <link href="//blog.tcspin.com/2017/03/08/repost/"/>
-    <id>//blog.tcspin.com/2017/03/08/repost/</id>
+    <link href="/2017/03/08/repost/"/>
+    <id>/2017/03/08/repost/</id>
     <published>2017-03-07T16:00:00.000Z</published>
     <updated>2017-03-08T14:35:05.000Z</updated>
     
@@ -184,14 +184,14 @@
     </summary>
     
     
-      <category term="other" scheme="//blog.tcspin.com/tags/other/"/>
+      <category term="other" scheme="/tags/other/"/>
     
   </entry>
   
   <entry>
     <title>css</title>
-    <link href="//blog.tcspin.com/2017/01/16/css/"/>
-    <id>//blog.tcspin.com/2017/01/16/css/</id>
+    <link href="/2017/01/16/css/"/>
+    <id>/2017/01/16/css/</id>
     <published>2017-01-15T16:00:00.000Z</published>
     <updated>2017-01-16T07:13:06.000Z</updated>
     
@@ -237,14 +237,14 @@
     </summary>
     
     
-      <category term="css" scheme="//blog.tcspin.com/tags/css/"/>
+      <category term="css" scheme="/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>regExp</title>
-    <link href="//blog.tcspin.com/2016/12/29/regExp/"/>
-    <id>//blog.tcspin.com/2016/12/29/regExp/</id>
+    <link href="/2016/12/29/regExp/"/>
+    <id>/2016/12/29/regExp/</id>
     <published>2016-12-29T15:44:00.000Z</published>
     <updated>2017-01-16T02:20:12.000Z</updated>
     
@@ -279,14 +279,14 @@ $(&quot;#input-val&quot;).on(&quot;keyup&quot;, function(){
     </summary>
     
     
-      <category term="正则" scheme="//blog.tcspin.com/tags/%E6%AD%A3%E5%88%99/"/>
+      <category term="正则" scheme="/tags/%E6%AD%A3%E5%88%99/"/>
     
   </entry>
   
   <entry>
     <title>gulp 合并压缩css文件</title>
-    <link href="//blog.tcspin.com/2016/12/18/gulp-css-concat/"/>
-    <id>//blog.tcspin.com/2016/12/18/gulp-css-concat/</id>
+    <link href="/2016/12/18/gulp-css-concat/"/>
+    <id>/2016/12/18/gulp-css-concat/</id>
     <published>2016-12-17T16:00:00.000Z</published>
     <updated>2016-12-18T14:11:52.000Z</updated>
     
@@ -330,14 +330,14 @@ gulp .task(&apos;concatCss&apos;, function(){
     </summary>
     
     
-      <category term="前端自动化" scheme="//blog.tcspin.com/tags/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+      <category term="前端自动化" scheme="/tags/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     
   </entry>
   
   <entry>
     <title>gulp-css-sprite</title>
-    <link href="//blog.tcspin.com/2016/12/14/gulp-css-sprite/"/>
-    <id>//blog.tcspin.com/2016/12/14/gulp-css-sprite/</id>
+    <link href="/2016/12/14/gulp-css-sprite/"/>
+    <id>/2016/12/14/gulp-css-sprite/</id>
     <published>2016-12-14T15:21:00.000Z</published>
     <updated>2016-12-16T02:46:08.000Z</updated>
     
@@ -396,14 +396,14 @@ gulp.task(&apos;spritesmith&apos;, function() {
     </summary>
     
     
-      <category term="前端自动化" scheme="//blog.tcspin.com/tags/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+      <category term="前端自动化" scheme="/tags/%E5%89%8D%E7%AB%AF%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     
   </entry>
   
   <entry>
     <title>学习 http</title>
-    <link href="//blog.tcspin.com/2016/12/04/http-Knowledge/"/>
-    <id>//blog.tcspin.com/2016/12/04/http-Knowledge/</id>
+    <link href="/2016/12/04/http-Knowledge/"/>
+    <id>/2016/12/04/http-Knowledge/</id>
     <published>2016-12-04T06:12:00.000Z</published>
     <updated>2016-12-08T12:01:17.000Z</updated>
     
@@ -511,14 +511,14 @@ gulp.task(&apos;spritesmith&apos;, function() {
     </summary>
     
     
-      <category term="http" scheme="//blog.tcspin.com/tags/http/"/>
+      <category term="http" scheme="/tags/http/"/>
     
   </entry>
   
   <entry>
     <title>pc-window-open</title>
-    <link href="//blog.tcspin.com/2016/12/01/pc-window-open/"/>
-    <id>//blog.tcspin.com/2016/12/01/pc-window-open/</id>
+    <link href="/2016/12/01/pc-window-open/"/>
+    <id>/2016/12/01/pc-window-open/</id>
     <published>2016-12-01T11:50:00.000Z</published>
     <updated>2016-12-01T16:05:58.000Z</updated>
     
@@ -580,14 +580,14 @@ getDate() -&gt; 得到当前的日期；
     </summary>
     
     
-      <category term="杂记" scheme="//blog.tcspin.com/tags/%E6%9D%82%E8%AE%B0/"/>
+      <category term="杂记" scheme="/tags/%E6%9D%82%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>H5-meta-and-other</title>
-    <link href="//blog.tcspin.com/2016/11/30/h5-meta/"/>
-    <id>//blog.tcspin.com/2016/11/30/h5-meta/</id>
+    <link href="/2016/11/30/h5-meta/"/>
+    <id>/2016/11/30/h5-meta/</id>
     <published>2016-11-30T14:10:00.000Z</published>
     <updated>2016-12-01T16:00:34.000Z</updated>
     
@@ -709,7 +709,7 @@ toLowerCase()--&gt;讲字符串的字母转为小写，并返回一个String 类
     </summary>
     
     
-      <category term="H5" scheme="//blog.tcspin.com/tags/H5/"/>
+      <category term="H5" scheme="/tags/H5/"/>
     
   </entry>
   
